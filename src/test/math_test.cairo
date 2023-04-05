@@ -3,6 +3,9 @@ use option::OptionTrait;
 
 use linear_regression::onnx_cairo::operators::math::int33;
 use linear_regression::onnx_cairo::operators::math::int33::i33;
+use linear_regression::onnx_cairo::operators::math::matrix::MatrixTrait;
+use linear_regression::lr::linear_regression::LRTrait;
+
 
 use linear_regression::math;
 
@@ -69,20 +72,19 @@ fn lr_test() {
     arr_b.append(val_b);
 
     // Data 
-    let X = Matrix::new(5, 2, arr);
-    let y = Matrix::new(5, 1, arr_y);
+    let X = MatrixTrait::new(5, 2, arr);
+    let y = MatrixTrait::new(5, 1, arr_y);
 
     // Create a linear regression model
-    let W = Matrix::new(1, 2, arr_W);
-    let b = Matrix::new(1, 1, arr_b);
-    let lr = LinearRegression::new(W, b);
+    let W = MatrixTrait::new(1, 2, arr_W);
+    let b = MatrixTrait::new(1, 1, arr_b);
+    let lr = LRTrait::new(W, b);
 
     // Predict the labels for the input data using the linear regression model
     let y_pred = lr.predict(X);
 
     // Compare the predicted labels with the actual labels
-    let epsilon = 0; // Set a small epsilon value for floating point comparisons
-    let i = 1_usize;
-    assert!((y_pred.get(i, 1_usize) - y.get(i, 1_usize)).abs() < epsilon);
+    let epsilon = 0; // Set a small epsilon value
+    assert((y_pred.get(1_usize, 1_usize) - y.get(1_usize, 1_usize)) < epsilon, 'distance less than epsilon');
     
 }
