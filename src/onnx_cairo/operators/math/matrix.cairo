@@ -2,8 +2,8 @@ use array::ArrayTrait;
 use box::BoxTrait;
 use option::OptionTrait;
 
-use onnx_cairo::operators::math::int33;
-use onnx_cairo::operators::math::int33::i33;
+use linear_regression::onnx_cairo::operators::math::int33;
+use linear_regression::onnx_cairo::operators::math::int33::i33;
 
 #[derive(Drop)]
 struct Matrix {

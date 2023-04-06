@@ -2,14 +2,14 @@ use array::ArrayTrait;
 use traits::Into;
 use option::OptionTrait;
 
-use onnx_cairo::operators::math::matrix::Matrix;
-use onnx_cairo::operators::math::matrix::MatrixTrait;
+use linear_regression::onnx_cairo::operators::math::matrix::Matrix;
+use linear_regression::onnx_cairo::operators::math::matrix::MatrixTrait;
 
-use onnx_cairo::operators::math::int33;
-use onnx_cairo::operators::math::int33::i33;
+use linear_regression::onnx_cairo::operators::math::int33;
+use linear_regression::onnx_cairo::operators::math::int33::i33;
 
-use onnx_cairo::operators::math::vector::find_min;
-use onnx_cairo::operators::math::vector::sum_vec;
+use linear_regression::onnx_cairo::operators::math::vector::find_min;
+use linear_regression::onnx_cairo::operators::math::vector::sum_vec;
 
 // The implementation is using pseudo-softmax for now: 
 // x = (x - min(x)) / sum(x)

@@ -21,7 +21,7 @@ fn test_math() {
 fn lr_test() -> Matrix {
     // Generate some random input data and their corresponding labels
     // For X Matrix
-    let mut arr = ArrayTrait::<i33>::new();
+    let mut arr = ArrayTrait::new();
     
     let val_0 = i33 { inner: 0_u32, sign: false };
     let val_1 = i33 { inner: 1_u32, sign: false };
@@ -46,7 +46,7 @@ fn lr_test() -> Matrix {
     arr.append(val_9);
 
     // For Y_true values
-    let mut arr_y = ArrayTrait::<i33>::new();
+    let mut arr_y = ArrayTrait::new();
     
     let val_y_0 = i33 { inner: 0_u32, sign: false };
     let val_y_1 = i33 { inner: 1_u32, sign: false };
@@ -61,14 +61,14 @@ fn lr_test() -> Matrix {
     arr_y.append(val_y_4);
 
     // For W_obvs values
-    let mut arr_W = ArrayTrait::<i33>::new();
+    let mut arr_W = ArrayTrait::new();
     let val_W_0 = i33 { inner: 2_u32, sign: false };
     let val_W_1 = i33 { inner: 1_u32, sign: false };
     arr_W.append(val_W_0);
     arr_W.append(val_W_1);
 
     // For bais values
-    let mut arr_b = ArrayTrait::<i33>::new();
+    let mut arr_b = ArrayTrait::new();
     let val_b = i33 { inner: 1_u32, sign: false };
     arr_b.append(val_b);
 

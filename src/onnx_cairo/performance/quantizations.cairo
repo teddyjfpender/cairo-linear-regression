@@ -3,12 +3,12 @@
 
 use array::ArrayTrait;
 use option::OptionTrait;
-use onnx_cairo::operators::math::int33;
-use onnx_cairo::operators::math::int33::i33;
-use onnx_cairo::operators::math::int33::max;
-use onnx_cairo::operators::math::int33::abs;
-use onnx_cairo::operators::math::vector::find_min;
-use onnx_cairo::operators::math::vector::find_max;
+use linear_regression::onnx_cairo::operators::math::int33;
+use linear_regression::onnx_cairo::operators::math::int33::i33;
+use linear_regression::onnx_cairo::operators::math::int33::max;
+use linear_regression::onnx_cairo::operators::math::int33::abs;
+use linear_regression::onnx_cairo::operators::math::vector::find_min;
+use linear_regression::onnx_cairo::operators::math::vector::find_max;
 
 
 fn symetric_quant(min_val: i33, max_val: i33, data: i33) -> i33 {

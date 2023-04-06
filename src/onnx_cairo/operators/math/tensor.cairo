@@ -1,10 +1,10 @@
 use array::ArrayTrait;
 use option::OptionTrait;
 
-use onnx_cairo::operators::math::int33;
-use onnx_cairo::operators::math::int33::i33;
-use onnx_cairo::operators::math::matrix::Matrix;
-use onnx_cairo::operators::math::matrix::MatrixTrait;
+use linear_regression::onnx_cairo::operators::math::int33;
+use linear_regression::onnx_cairo::operators::math::int33::i33;
+use linear_regression::onnx_cairo::operators::math::matrix::Matrix;
+use linear_regression::onnx_cairo::operators::math::matrix::MatrixTrait;
 
 impl Arrayi33Drop of Drop::<Array::<i33>>;
 
